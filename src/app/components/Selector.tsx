@@ -72,7 +72,10 @@ export function Selector() {
       </label>
 
       <br />
-      <button onClick={fetchInstruments} disabled={loading} style={{ marginTop: 20 }}>
+      <button
+        onClick={fetchInstruments}
+        disabled={loading}
+        className="mt-5 px-6 py-3 bg-transparent text-white font-semibold rounded border-2 border-white hover:bg-white hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75">
         {loading ? 'Loading...' : 'Get Instruments'}
       </button>
 
@@ -80,14 +83,15 @@ export function Selector() {
 
       {result && (
         <div style={{ marginTop: 20 }}>
-          <h3>Instruments</h3>
+          <h3>Instruments: </h3>
           <ul>
             {result.instruments.map((instId) => (
               <li key={instId}>{instrumentMap[instId] || instId}</li>
             ))}
+            <br />
           </ul>
 
-          <h4>Production Notes</h4>
+          <h4>Production Notes: </h4>
           <p>{result.productionNotes}</p>
         </div>
       )}
