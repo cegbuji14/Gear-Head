@@ -15,8 +15,11 @@ This project shows users which instruments are necessary to make songs in differ
 Run
 
 git clone https://github.com/cegbuji14/Gear-Head.git
+
 cd Gear-Head
+
 npm install
+
 npm run dev
 
 Open browser and go to
