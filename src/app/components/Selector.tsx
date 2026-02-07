@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { instrumentMap } from '@/data/instruments';
 
 const eras = ['1960s', '1970s', '1980s', '1990s', '2000s'] as const;
 const genres = ['rock', 'funk', 'rnb', 'hip_hop', 'pop', 'jazz'] as const;
@@ -12,6 +13,8 @@ type InstrumentData = {
   instruments: string[];
   productionNotes: string;
 };
+
+
 
 export function Selector() {
   const [era, setEra] = useState<Era>('1960s');
@@ -79,10 +82,11 @@ export function Selector() {
         <div style={{ marginTop: 20 }}>
           <h3>Instruments</h3>
           <ul>
-            {result.instruments.map((inst) => (
-              <li key={inst}>{inst}</li>
+            {result.instruments.map((instId) => (
+              <li key={instId}>{instrumentMap[instId] || instId}</li>
             ))}
           </ul>
+
           <h4>Production Notes</h4>
           <p>{result.productionNotes}</p>
         </div>

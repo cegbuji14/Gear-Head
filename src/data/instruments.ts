@@ -17,5 +17,10 @@ export const instruments: Instrument[] = [
   { id: "clarinet", name: "Clarinet", family: "Woodwind" },
   { id: "upright_bass", name: "Upright Bass", family: "Strings" },
   { id: "turntable", name: "Turntable", family: "Electronic" }
-
 ]
+
+export const instrumentMap = instruments.reduce((map, instrument) => {
+  map[instrument.id] = instrument.name;
+  return map;
+}, {} as Record<string, string>);//easy access to instrument name
+
