@@ -1,6 +1,6 @@
 # GearHead (v1)
 
-This project shows user which instruments are necessary to make songs in different styles according to the norms of that era.
+This project shows users which instruments are necessary to make songs in different styles according to the norms of that era.
 
 ## Tech Stack
 
@@ -24,7 +24,7 @@ http://localhost:3000
 
 # Future Enhancements (v2+)
 - Larger instrument pool along with specific instrument roles in an ensemble.
-- Specific artist/band styles within in era.
+- Specific artist/band styles within an era.
 - More in depth production notes
 - Improved UI
 - Integration with a database (PostgreSQL + Prisma)
