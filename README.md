@@ -1,6 +1,6 @@
 # GearHead (v1)
 
-This project shows user which instruments are necessary to make in songs in different styles according to the norms of that era.
+This project shows user which instruments are necessary to make songs in different styles according to the norms of that era.
 
 ## Tech Stack
 
