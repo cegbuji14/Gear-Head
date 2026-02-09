@@ -14,6 +14,12 @@ export type Era = {
     id: string
     name: string
     family: string
+    roles?: string []//option to give instrument a role like rhythm/lead
+    types?: InstrumentType[]//optional array of specific types of instrument like Les Paul or Jaguars
+  }
+  export interface InstrumentType {
+    id: string;
+    name: string;
   }
   
   export type StyleInstrument = {
