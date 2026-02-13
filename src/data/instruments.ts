@@ -64,7 +64,6 @@ export const instruments: Instrument[] = [
       {id: "minimoog", name: "Minimoog Model D"},
       {id: "arp2600", name: "ARP2600"},
       {id: "yamahadx7", name: "Yamaha DX-7"},
-      {id: "minimoog", name: "Minimoog Model D"},
       {id: "korgm1", name: "Korg M1"},
       {id: "ensoniqesq", name: "Ensoniq ESQ"},
       {id: "rolandjuno", name: "Roland Juno 106"},
@@ -87,6 +86,20 @@ export const instruments: Instrument[] = [
       {id: "ensoniqasr10", name: "Ensoniq ASR-10"},
       {id: "mpc2000xl", name: "Akai MPC2000XL"},
       {id: "kontakt", name: "Native Instrument's Kontakt"},
+    ],
+    family: "Electronic" },
+
+    { id: "multi_track", 
+    name: "Multitrack Recorder",
+    types: [
+      {id: "studerj37", name: "Studer J37 (4 track)"},
+      {id: "ampex440", name: "Ampex AG-440 (4 & 8 track)"},
+      {id: "studera80", name: "Studer A80 (16 & 24 track)"},
+      {id: "tascam_porta", name: "TASCAM Portastudio 144 (home 4 track)"},
+      {id: "studera800", name: "Studer A800 (24 track industry standard)"},
+      {id: "sony3324", name: "Sony PCM-3324 (24 track digital tape)"},
+      {id: "studera827", name: "Studer A827 (advanced 24 track analog)"},
+      {id: "pro_tools", name: "Pro Tools (DAW)"},
     ],
     family: "Electronic" },
 ]

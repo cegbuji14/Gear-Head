@@ -141,7 +141,6 @@ export function Selector() {
 
       {result && (
         <div style={{ marginTop: 24 }}>
-          <h3>Instruments</h3>
           <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
             {result.instruments.map((instrumentId) => (
               <InstrumentItem key={instrumentId} instrumentId={instrumentId} />
