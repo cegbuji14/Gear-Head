@@ -2,6 +2,14 @@
 
 This project shows users which instruments are necessary to make songs in different styles according to the norms of that era.
 
+## Screenshots
+
+### Quiz Interface
+![Home](/public/screenshots/home.png)
+
+### Resuls
+![Genre Results](/public/screenshots/results.png)
+
 ## Tech Stack
 
 - Node.js
