@@ -3,9 +3,10 @@
 import React, { useState } from 'react';
 import { instrumentById } from '@/data/instruments';
 import { Instrument } from '@/types/music';
+import { genres } from '@/data/genres';
 
 const eras = ['1960s', '1970s', '1980s', '1990s', '2000s'] as const;
-const genres = ['rock', 'funk', 'rnb', 'hip_hop', 'pop', 'jazz'] as const;
+//const genres = ['rock', 'funk', 'rnb', 'hip_hop', 'pop', 'jazz'] as const;
 
 type Era = typeof eras[number];
 type Genre = typeof genres[number];
@@ -17,7 +18,7 @@ type ApiResponse = {
 
 export function Selector() {
   const [era, setEra] = useState<Era>('1960s');
-  const [genre, setGenre] = useState<Genre>('rock');
+  const [genre, setGenre] = useState<(typeof genres)[number]["id"]>("rock");;
   const [result, setResult] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -111,10 +112,10 @@ export function Selector() {
 
       <label style={{ marginTop: 12, display: 'block' }}>
         Genre:
-        <select value={genre} onChange={(e) => setGenre(e.target.value as Genre)} style={{ marginLeft: 8 }}>
+        <select value={genre} onChange={(e) => setGenre(e.target.value)} style={{ marginLeft: 8 }}>
           {genres.map((g) => (
-            <option key={g} value={g}>
-              {g}
+            <option key={g.id} value={g.id}>
+              {g.name}
             </option>
           ))}
         </select>
