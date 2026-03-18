@@ -5,8 +5,7 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -32,14 +31,12 @@ model Instrument {
   id     String @id
   name   String
   family String
-  types  InstrumentType[]
 }
 
 model InstrumentType {
   id           String @id
   name         String
   instrumentId String
-  instrument   Instrument @relation(fields: [instrumentId], references: [id])
 }
 
 model EraGenreStyle {

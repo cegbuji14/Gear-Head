@@ -45,9 +45,6 @@ CREATE TABLE "EraGenreStyle" (
 );
 
 -- AddForeignKey
-ALTER TABLE "InstrumentType" ADD CONSTRAINT "InstrumentType_instrumentId_fkey" FOREIGN KEY ("instrumentId") REFERENCES "Instrument"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
 ALTER TABLE "EraGenreStyle" ADD CONSTRAINT "EraGenreStyle_eraId_fkey" FOREIGN KEY ("eraId") REFERENCES "Era"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
